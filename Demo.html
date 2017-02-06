@@ -40,15 +40,15 @@
           logger.i('ready');
       });
       function openDrawer() {
-            dd.biz.chat.pickConversation({
-                corpId:'3351c8fdd7ab71186ee639226a47c84392942223',
-                isConfirm:'true',
-                onSuccess : function() {
-            /*回调*/
-            },
-            onFail : function(err) {} 
-              
-            });
+            dd.device.notification.alert({
+              message:"亲爱的",
+              title:"提示",
+              buttonName:"收到",
+              onSuccess : function() {
+                  logger.i('hello');
+              },
+              onFail : function(err) {logger.i(err);}
+          });
       }
     </script>
 </head>
