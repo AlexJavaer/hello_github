@@ -86,7 +86,11 @@
                 minDuration:'1',
                 maxDuration:'6',
                 name:"nimamaipi","url":"https://xxxx.xxxx.xxx/upload",
-                formData:{"key1":"value1","key2":"value2"}
+                formData:{"key1":"value1","key2":"value2"},
+                onSuccess : function(result) {
+                  },
+                onFail : function(err) {logger.i(err);}
+            });
             }); 
       }
     </script>
