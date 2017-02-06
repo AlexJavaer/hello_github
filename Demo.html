@@ -52,12 +52,11 @@
           });
       }
       function openMap() {
-          alert("dasd");
             dd.device.geolocation.get({
             targetAccuracy : '200',
             coordinate : '1',
             withReGeocode : 'true',
-            onSuccess : function(result) {alert(result);
+            onSuccess : function(result) {
               },
             onFail : function(err) {alert(JSON.stringify(err));}
             });
