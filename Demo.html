@@ -41,10 +41,10 @@
           logger.i('ready');
       });
       function openDrawer() {
-               dd.device.launcher.launchApp({
+               DingTalkPC.device.launcher.launchApp({
                 app:"www.alipay.com",
-                onSuccess : function() {},
-                onFail : function() {}
+                onSuccess : function(data) {},
+                onFail : function(err) {}
             });
             DingTalkPC.device.notification.alert({
             message: "亲爱的",
