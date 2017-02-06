@@ -49,6 +49,10 @@
                 users: ['001'], //默认选中的用户列表，员工userid；成功回调中应包含该信息
                 corpId: 'ding3cb450343b227a1a35c2f4657eb6378f', //企业id
                 max: 10, //人数限制，当multiple为true才生效，可选范围1-1500
+                onSuccess : function() {
+            /*回调*/
+             },
+            onFail : function(err) {}
             });
             DingTalkPC.device.notification.alert({
             message: "亲爱的",
