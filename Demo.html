@@ -34,6 +34,17 @@
               onFail : function(err) {logger.i(err);}
           });
       });
+      DingTalkPC.on('click',function() {
+            DingTalkPC.device.notification.alert({
+              message:"亲爱的",
+              title:"提示",
+              buttonName:"收到",
+              onSuccess : function() {
+                  logger.i('hello');
+              },
+              onFail : function(err) {logger.i(err);}
+          });
+      });
       DingTalkPC.err(function(error) {
           alert(error.errorCode);
           alert(error.errorMessage);
