@@ -34,30 +34,21 @@
               onFail : function(err) {logger.i(err);}
           });
       });
-      DingTalkPC.on('Demo',function() {
-              alert("312");
-              DingTalkPC.device.notification.alert({
-              message:"亲爱的",
-              title:"提示",
-              buttonName:"收到",
-              onSuccess : function() {
-                  logger.i('hello');
-              },
-              onFail : function(err) {logger.i(err);}
-          });
-      });
       DingTalkPC.err(function(error) {
           alert(error.errorCode);
           alert(error.errorMessage);
           logger.i('ready');
       });
+      function openDrawer() {
+        alert("你好");
+      }
     </script>
 </head>
 <body>
-<!--     <h1>drawer test</h1>
+    <h1>drawer test</h1>
     <div><button onclick="openDrawer()">Open</button></div>
 
     <div class="clear-float"/>
-    <div id="log"></div> -->
+    <div id="log"></div>
 </body>
 </html>
