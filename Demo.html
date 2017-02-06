@@ -53,11 +53,11 @@
       }
       function openMap() {
             dd.biz.map.locate({
-            latitude: 39.903578, // 纬度
-            longitude: 116.473565, // 经度
+            latitude: '39.903578', // 纬度
+            longitude: '116.473565', // 经度
             onSuccess : function(result) {
               },
-            onFail : function(err) {}
+            onFail : function(err) {logger.i(err);}
             });
       }
     </script>
