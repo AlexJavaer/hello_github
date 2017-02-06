@@ -41,8 +41,8 @@
           logger.i('ready');
       });
       function openDrawer() {
-            dd.biz.util.scan({
-                type:"qrCode",
+            dd.device.launcher.launchApp({
+               app:"taobao",
                 onSuccess : function(data) {},
                 onFail : function(err) {}
             });
