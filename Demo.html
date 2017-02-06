@@ -40,8 +40,8 @@
           logger.i('ready');
       });
       function openDrawer() {
-            DingTalkPC.biz.telephone.call({
-                "corpId":"ding3cb450343b227a1a35c2f4657eb6378f","users":["18571836876"],
+            DingTalkPC.biz.util.scan({
+                "type":"qrCode",
                 onSuccess : function() {alert('0');},
                 onFail : function() {alert('1');}
             });
