@@ -13,6 +13,7 @@
         }
     </style>
     <script type="text/javascript" src="https://g.alicdn.com/dingding/dingtalk-pc-api/2.6.2/index.js"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/dingding/open-develop/1.0.0/dingtalk.js"></script>
     <script type="text/javascript">
        DingTalkPc.config({
            agentId: '75235548', // 必填，微应用ID
@@ -40,7 +41,7 @@
           logger.i('ready');
       });
       function openDrawer() {
-            DingTalkPC.biz.util.scan({
+            dd.biz.util.scan({
                 "type":"qrCode",
                 onSuccess : function() {alert('0');},
                 onFail : function() {alert('1');}
