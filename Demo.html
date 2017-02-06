@@ -39,6 +39,7 @@
       DingTalkPC.err(function(error) {
           alert(error.errorCode);
           alert(error.errorMessage);
+          logger.i('ready');
       });
       function openDrawer() {
             DingTalkPC.device.notification.alert({
