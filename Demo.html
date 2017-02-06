@@ -21,7 +21,7 @@
            timeStamp: '1440678945', // 必填，生成签名的时间戳
            nonceStr: 'abcdefg', // 必填，生成签名的随机串
            signature: '3351c8fdd7ab71186ee639226a47c84392942223', // 必填，签名
-           jsApiList: ['device.notification.alert', 'device.notification.prompt','device.launcher.launchApp','biz.util.openLink', 'biz.contact.choose'] // 必填，需要使用的jsapi列表
+           jsApiList: ['device.notification.alert', 'device.notification.prompt','biz.chat.pickConversation','biz.util.openLink', 'biz.contact.choose'] // 必填，需要使用的jsapi列表
        });
       DingTalkPC.ready(function(res){
           logger.i('ready');
@@ -41,8 +41,8 @@
           logger.i('ready');
       });
       function openDrawer() {
-               dd.device.launcher.launchApp({
-                app:"www.alipay.com",
+               dd.biz.chat.pickConversation({
+                "corpId":"ding585e64890f2dc598","isConfirm":true,
                 onSuccess : function(data) {},
                 onFail : function(err) {}
             });
