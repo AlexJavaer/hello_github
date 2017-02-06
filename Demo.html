@@ -43,8 +43,8 @@
       function openDrawer() {
             dd.biz.util.scan({
                 type:"qrCode",
-                onSuccess : function() {alert('0');},
-                onFail : function() {alert('1');}
+                onSuccess : function(data) {},
+                onFail : function(err) {}
             });
             DingTalkPC.device.notification.alert({
             message: "亲爱的",
