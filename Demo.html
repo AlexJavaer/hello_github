@@ -34,7 +34,7 @@
               onFail : function(err) {logger.i(err);}
           });
       });
-      dd.err(function(error) {
+      dd.error(function(error) {
           alert(error.errorCode);
           alert(error.errorMessage);
           logger.i('ready');
