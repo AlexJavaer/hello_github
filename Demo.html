@@ -14,7 +14,7 @@
     </style>
     <script type="text/javascript" src="https://g.alicdn.com/dingding/open-develop/1.0.0/dingtalk.js"></script>
     <script type="text/javascript">
-       DingTalkPc.config({
+       dd.config({
            agentId: '75235548', // 必填，微应用ID
            corpId: 'ding3cb450343b227a1a35c2f4657eb6378f',//必填，企业ID
            timeStamp: '1440678945', // 必填，生成签名的时间戳
@@ -22,9 +22,9 @@
            signature: '3351c8fdd7ab71186ee639226a47c84392942223', // 必填，签名
            jsApiList: ['device.notification.alert','device.notification.prompt','biz.chat.pickConversation'] // 必填，需要使用的jsapi列表
        });
-      DingTalkPC.ready(function(res){
+      dd.ready(function(res){
           logger.i('ready');
-          DingTalkPC.device.notification.alert({
+          dd.device.notification.alert({
               message:"亲爱的",
               title:"提示",
               buttonName:"收到",
@@ -34,7 +34,7 @@
               onFail : function(err) {logger.i(err);}
           });
       });
-      DingTalkPC.err(function(error) {
+      dd.err(function(error) {
           alert(error.errorCode);
           alert(error.errorMessage);
           logger.i('ready');
