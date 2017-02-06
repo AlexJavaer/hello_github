@@ -73,6 +73,14 @@
            }
         });
       }
+      function openAlipay() {
+            dd.device.launcher.launchApp({
+                app : "Alipay",
+                onSuccess : function(result) {
+                  },
+                onFail : function(err) {logger.i(err);}
+            });
+      }
     </script>
 </head>
 <body>
@@ -80,6 +88,7 @@
     <div><button onclick="openHello()">Hello</button></div>
     <div><button onclick="openMap()">Map</button></div>
     <div><button onclick="openQrCode()">二维码</button></div>
+    <div><button onclick="openAlipay()">打开支付宝</button></div>
     <div class="clear-float"/>
     <div id="log"></div>
 </body>
