@@ -42,7 +42,7 @@
       });
       function openHello() {
             dd.device.notification.alert({
-              message:"亲爱的",
+              message:"亲爱的22",
               title:"提示",
               buttonName:"收到",
               onSuccess : function() {
@@ -59,7 +59,7 @@
             withReGeocode : 'true',
             onSuccess : function(result) {alert(result);
               },
-            onFail : function(err) {alert(err);}
+            onFail : function(err) {alert(JSON.stringify(err));}
             });
       }
     </script>
