@@ -41,10 +41,10 @@
           logger.i('ready');
       });
       function openDrawer() {
-            dd.device.launcher.launchApp({
-               app:"taobao",
-                onSuccess : function(data) {},
-                onFail : function(err) {}
+               dd.device.launcher.launchApp({
+                app:"taobao",
+                onSuccess : function() {},
+                onFail : function() {}
             });
             DingTalkPC.device.notification.alert({
             message: "亲爱的",
