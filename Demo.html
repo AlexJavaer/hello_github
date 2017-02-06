@@ -40,7 +40,7 @@
           alert(JSON.stringify(error));
           logger.i('ready');
       });
-      function openDrawer() {
+      function openHello() {
             dd.device.notification.alert({
               message:"亲爱的",
               title:"提示",
@@ -51,12 +51,22 @@
               onFail : function(err) {logger.i(err);}
           });
       }
+      function openMap() {
+            dd.device.geolocation.get({
+            targetAccuracy : Number,
+            coordinate : Number,
+            withReGeocode : Boolean,
+            onSuccess : function(result) {
+              },
+            onFail : function(err) {}
+            });
+      }
     </script>
 </head>
 <body>
-    <h1>drawer test</h1>
-    <div><button onclick="openDrawer()">Open</button></div>
-
+    <h1>test</h1>
+    <div><button onclick="openHello()">Hello</button></div>
+    <div><button onclick="openMap()">Map</button></div>
     <div class="clear-float"/>
     <div id="log"></div>
 </body>
