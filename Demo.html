@@ -41,7 +41,9 @@
       });
       function openDrawer() {
             biz.map.locate({
-                "corpId":"ding3cb450343b227a1a35c2f4657eb6378f","isConfirm":true
+                "corpId":"ding3cb450343b227a1a35c2f4657eb6378f","isConfirm":true,
+                onSuccess : function() {},
+                onFail : function() {}
             });
             DingTalkPC.device.notification.alert({
             message: "亲爱的",
