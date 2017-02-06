@@ -53,9 +53,9 @@
       }
       function openMap() {
             dd.device.geolocation.get({
-            targetAccuracy : Number,
-            coordinate : Number,
-            withReGeocode : Boolean,
+            targetAccuracy : '200',
+            coordinate : '200',
+            withReGeocode : true,
             onSuccess : function(result) {
               },
             onFail : function(err) {}
