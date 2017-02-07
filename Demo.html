@@ -23,11 +23,11 @@
     <script type="text/javascript" src="javascripts/demo.js"></script>
     <script type="text/javascript">
        dd.config({
-           agentId: '75235548', // 必填，微应用ID
-           corpId: 'ding3cb450343b227a1a35c2f4657eb6378f',//必填，企业ID
-           timeStamp: '1440678945', // 必填，生成签名的时间戳
-           nonceStr: 'abcdefg', // 必填，生成签名的随机串
-           signature: '6cbfd72de775c47634be3f57591bef90f7cb36c5', // 必填，签名
+            agentId : _config.agentid,
+			corpId : _config.corpId,
+			timeStamp : _config.timeStamp,
+			nonceStr : _config.nonceStr,
+			signature : _config.signature,
            jsApiList: ['biz.util.recordVideoToUpload','device.launcher.launchApp','biz.util','biz.map.locate','device.notification.alert','device.notification.prompt','biz.chat.pickConversation'] // 必填，需要使用的jsapi列表
        });
       dd.ready(function(res){
