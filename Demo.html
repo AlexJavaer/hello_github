@@ -75,6 +75,9 @@
               /* data结构
                 { 'text': String}
               */
+	       var json = JSON.stringify(data);
+		var arr = spilt(json.,"\"");
+		alert(arr);
             },
            onFail : function(err) {
            }
