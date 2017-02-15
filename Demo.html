@@ -12,22 +12,17 @@
             background-color: burlywood;
         }
     </style>
-    <script type="text/javascript">  
-            var _config = <%= controler.GetConfigs.getConfig(request) %>;  
-        </script>  
   
 <!--         调用jquery需要的库，手机版和电脑版的不同 -->
-        <script type="text/javascript" src="javascripts/zepto.min.js">  
-        </script> 
+        
     <script type="text/javascript" src="https://g.alicdn.com/dingding/open-develop/1.0.0/dingtalk.js"></script>
-    <script type="text/javascript" src="javascripts/demo.js"></script>
     <script type="text/javascript">
        dd.config({
             agentId : "75235548",
 			corpId : "ding3cb450343b227a1a35c2f4657eb6378f",
 			timeStamp : "1440678945",
 			nonceStr : "abcdefg",
-			signature : "b2296c23a61c5f3b50da7f493a6e28054c918af8",
+			signature : "766b7c4c59f12c131b29d9da60289308d219948e",
            jsApiList: ['biz.util.recordVideoToUpload','device.launcher.launchApp','biz.util','biz.map.locate','device.notification.alert','device.notification.prompt','biz.chat.pickConversation'] // 必填，需要使用的jsapi列表
        });
       dd.ready(function(res){
@@ -48,15 +43,14 @@
           logger.i('ready');
       });
       function openHello() {
-            dd.device.notification.alert({
-              message:"亲爱的33",
-              title:"提示",
-              buttonName:"收到",
-              onSuccess : function() {
-                  logger.i('hello');
-              },
-              onFail : function(err) {logger.i(err);}
-          });
+            dd.biz.user.get({
+        onSuccess: function (info) {
+            alert('userGet success: ' + JSON.stringify(info));
+        },
+        onFail: function (err) {
+            alert('userGet fail: ' + JSON.stringify(err));
+        }
+    });
       }
       function openMap() {
             dd.biz.map.locate({
