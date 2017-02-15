@@ -23,7 +23,7 @@
 			timeStamp : "1440678945",
 			nonceStr : "abcdefg",
 			signature : "766b7c4c59f12c131b29d9da60289308d219948e",
-           jsApiList: ['biz.util.recordVideoToUpload','device.launcher.launchApp','biz.util','biz.map.locate','device.notification.alert','device.notification.prompt','biz.chat.pickConversation'] // 必填，需要使用的jsapi列表
+           jsApiList: ['biz.user.get','biz.util.recordVideoToUpload','device.launcher.launchApp','biz.util','biz.map.locate','device.notification.alert','device.notification.prompt','biz.chat.pickConversation'] // 必填，需要使用的jsapi列表
        });
       dd.ready(function(res){
           logger.i('ready');
@@ -32,7 +32,7 @@
               title:"提示",
               buttonName:"收到",
               onSuccess : function() {
-                  logger.i('hello');
+                  alert('hello');
               },
               onFail : function(err) {logger.i(err);}
           });
